@@ -20,7 +20,7 @@ import Users from "./db/userModel.js";
 //Curb Cores Error by adding a header here
 
 //register endpoint
-app.post("/register", (request, response) => {            
+app.post('/register', (request, response) => {            
     //ищем пользователя в модели базы данных UsersModel
     Users.findOne({ email: request.body.email}, (err, userExist) => 
     {
@@ -71,7 +71,7 @@ app.post("/register", (request, response) => {
 })
 
 //login endpoint
-app.post("/login", (request, response) => {
+app.post('/login', (request, response) => {
     //check if email exists
     Users.findOne({email: request.body.email})
     //if email exists
